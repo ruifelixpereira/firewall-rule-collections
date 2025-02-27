@@ -1,0 +1,39 @@
+.alzlib
+
+# Local .terraform directories
+**/.terraform/*
+.terraform
+**.tfbackend**
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
+# example: *tfplan*
+*.tfvars
+*.hcl
+*.vs
+
+# Ignore any .tfvars files that are generated automatically for each Terraform run
+**/*.tfvars
+**/*.tfvars.json
+
+*tfplan.json
+**/tfplan.json
+*tfplan
+**/tfplan
+
+**/.terraform
+**/*.tfstate
+**/*.tfplan
+.DS_Store
+**/terraform.tfstate.d
+**/terraform.tfstate.backup
+**/.terraform.tfstate.lock.info
+**/*.lock.hcl
+
+.env
