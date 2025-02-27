@@ -29,11 +29,10 @@ jobs:
       # this is needed since we are running terraform with read-only permissions
       ARM_SKIP_PROVIDER_REGISTRATION: true
       # TF vars
-      TF_VAR_location: ${{ secrets.TF_VAR_location }}
-      TF_VAR_environment: ${{ secrets.TF_VAR_environment }}
-      TF_VAR_firewall_policy_resource_id: ${{ secrets.TF_VAR_firewall_policy_resource_id }}
-      TF_VAR_rule_collection_group_name: ${{ secrets.TF_VAR_rule_collection_group_name }}
-      TF_VAR_rule_collection_group_priority: ${{ secrets.TF_VAR_rule_collection_group_priority }}
+      TF_VAR_location: ${{ secrets.TF_VAR_LOCATION }}
+      TF_VAR_environment: ${{ secrets.TF_VAR_ENVIRONMENT }}
+      TF_VAR_firewall_policy_resource_id: ${{ secrets.TF_VAR_FIREWALL_POLICY_RESOURCE_ID }}
+      TF_VAR_rule_collection_group_name: ${{ secrets.TF_VAR_RULE_COLLECTION_GROUP_NAME }}
 
     steps:
     # Checkout the repository to the GitHub Actions runner
