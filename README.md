@@ -1,4 +1,4 @@
-# Azure Firewall Policy Rule Sets in Terraform
+# Azure Firewall Policy Rule Collection Group in Terraform
 
 The main purpose of this repository is to provide the Terraform  IaC to configure Azure Firewall Policy rule sets.
 
