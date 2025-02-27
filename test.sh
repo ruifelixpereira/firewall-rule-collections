@@ -52,6 +52,7 @@ export TF_VAR_environment=$environment
 export TF_VAR_firewall_policy_resource_id=$firewall_policy_resource_id
 export TF_VAR_rule_collection_group_name=$rule_collection_group_name
 export TF_VAR_rule_collection_group_priority=$rule_collection_group_priority
+export TF_VAR_subscription_id=$ARM_SUBSCRIPTION_ID
  
 
 ########################################
