@@ -32,7 +32,7 @@ jobs:
       TF_VAR_environment: ${{ secrets.TF_VAR_ENVIRONMENT }}
       TF_VAR_firewall_policy_resource_id: ${{ secrets.TF_VAR_FIREWALL_POLICY_RESOURCE_ID }}
       TF_VAR_rule_collection_group_name: ${{ secrets.TF_VAR_RULE_COLLECTION_GROUP_NAME }}
-      TF_VAR_subscription_id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      TF_VAR_subscription_id: e8460393-3aeb-4161-a310-a46849221365
 
     steps:
     # Checkout the repository to the GitHub Actions runner
