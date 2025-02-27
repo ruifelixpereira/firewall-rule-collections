@@ -22,8 +22,8 @@ env:
   ARM_TENANT_ID: "${{ secrets.AZURE_TENANT_ID }}"
 
 jobs:
-  terraform-apply:
-    name: 'Terraform Apply'
+  terraform-deploy:
+    name: 'Terraform Deploy'
     runs-on: ubuntu-latest
     env:
       # this is needed since we are running terraform with read-only permissions
@@ -33,6 +33,7 @@ jobs:
       TF_VAR_environment: ${{ secrets.TF_VAR_ENVIRONMENT }}
       TF_VAR_firewall_policy_resource_id: ${{ secrets.TF_VAR_FIREWALL_POLICY_RESOURCE_ID }}
       TF_VAR_rule_collection_group_name: ${{ secrets.TF_VAR_RULE_COLLECTION_GROUP_NAME }}
+      TF_VAR_subscription_id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
     steps:
     # Checkout the repository to the GitHub Actions runner
@@ -44,10 +45,6 @@ jobs:
       uses: hashicorp/setup-terraform@v3
       with:
         terraform_wrapper: false
-
-    # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
-    - name: Terraform Version
-      run: terraform --version
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init

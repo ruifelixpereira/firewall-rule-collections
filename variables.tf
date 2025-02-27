@@ -10,6 +10,12 @@ variable "environment" {
   description = "(Required) Environment Name"
 }
 
+variable "subscription_id" {
+  type        = string
+  description = "(Required) Subscription ID"
+  default = "00000000-0000-0000-0000-000000000000"
+}
+
 #variable "resource_group_name" {
 #  type        = string
 #  description = "(Required) Resource group name"
